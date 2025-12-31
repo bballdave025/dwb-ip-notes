@@ -88,7 +88,7 @@ See LICENSE for full terms.
 
 Each subproject contains:
 
-- a short IP note (IP_Notes_<date>.md)
+- a short IP note (IP_Notes_-_&lt;project&gt;_&lt;date&gt;.md)
 minimal background
 - explicit boundaries between open research and future work
 

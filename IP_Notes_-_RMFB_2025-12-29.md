@@ -1,9 +1,47 @@
 # IP Notes — RMFB (Reused Manuscript Fragments in Bindings)
 Date: 2025-12-29  
-Author: David Black &nbsp;&nbsp;&nbsp;&nbsp; GitHub @bballdave025)  
+Author: David Black &nbsp;&nbsp;&nbsp;&nbsp; GitHub @bballdave025
+
+## Document Map
+
+This repository separates **intellectual property hygiene** from **vision, narrative, and examples**.
+
+- **This document (`IP_Notes_RMFB`)**  
+  Defines scope, boundaries, non-claims, and ownership hygiene for the RMFB project.
+
+- **Vision & collaborator-facing narrative**  
+  See:  
+  [`IP_Plus_Vision_RMFB_rev-2026-01-01.md`](https://github.com/bballdave025/rib-wrist-in-bin-din/blob/main/IP_Plus_Vision_RMFB_rev-2026-01-01.md)
+
+- **Technical experiments, models, and code**  
+  Maintained in project-specific repositories (e.g. model tests, SageMaker notebooks).
+
+This separation is intentional and designed to protect both contributors and future collaborators.
+
+## Explicit Non-Goals
+
+The RMFB project explicitly does **not** aim to:
+
+- assert ownership over historical manuscripts, bindings, or images;
+- replace expert manuscript scholarship, codicology, or paleography;
+- automate attribution, dating, or provenance determination;
+- infer authorship or historical context without expert validation;
+- treat machine outputs as authoritative rather than suggestive.
+
+All automated methods are intended as **discovery and triage tools**, not final arbiters.
+
 
 ## 0) One-sentence intent (the thing I most want to protect)
 RMFB is intended to be **public-domain / open research**, with methods, documentation, and (where permissible) derived artifacts released openly.
+
+### Ethical Position
+
+RMFB prioritizes **discovery, preservation, and scholarly access** over extraction or automation-for-its-own-sake.
+
+The project is motivated by the recovery of historically meaningful traces while respecting:
+- the labor of past scribes and binders,
+- the stewardship of modern archives,
+- and the interpretive authority of human experts.
 
 ## 1) Project summary
 RMFB is a computer-vision–assisted research program to identify **reused manuscript fragments in bindings** (and related “information-bearing writing-surface traces”) across large collections of document images, with the goal of surfacing historically and genealogically valuable material that is currently hard to find at scale. The basic method is to train and evaluate CNN-based classifiers (and later segmentation models) to detect “reuse” cases and then use explainability tooling (e.g., Grad-CAM) to support trust and scholarly review.
@@ -29,6 +67,15 @@ The target objects are cases where a previously used manuscript or writing surfa
 - `rib-wrist-in-bin-din` — expanded methods outline / “funding-friendly” framing (GitHub).
 - `congenial-chainsaw-rmfb-html` — classification consistency work and example definitions (GitHub).
 - `fhtw-paper-code-prep` (branch: `cifar10-vanilla-cnn`) — reproducible training scaffolds for CV experiments (GitHub).
+
+### Model Status and Claims Boundary
+
+- Models discussed or referenced in this project are **exploratory and comparative**.
+- No single architecture is claimed as definitive or optimal.
+- Ensemble, abstention-based, and human-in-the-loop workflows are preferred over forced classification.
+- Reported performance metrics are contextual and dataset-dependent.
+
+Any future claims will be supported by documented experiments and explicit uncertainty estimates.
 
 ### 5.2 Research claims already demonstrated (example baseline)
 An early approach used transfer learning with **ResNet-50** (ImageNet initialization) and reports strong training accuracy in a small study (“over 600 images…96.77% accuracy…after 30 epochs”). 4  
@@ -70,3 +117,12 @@ To avoid any ambiguity about ownership:
 This document exists to clearly state:
 1) RMFB is a **personal, open-research project** (public-domain intent), and  
 2) it is being developed in a way designed to avoid entanglement with employer IP.
+
+## Vision and Examples
+
+For motivation, historical context, illustrative examples, and collaborator-facing narrative, see:
+
+➡️ **IP Plus Vision Document**  
+[`IP_Plus_Vision_RMFB_rev-2026-01-01.md`](https://github.com/bballdave025/rib-wrist-in-bin-din/blob/main/IP_Plus_Vision_RMFB_rev-2026-01-01.md)
+
+That document intentionally contains material *not* included here.

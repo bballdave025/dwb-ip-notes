@@ -68,7 +68,7 @@ The target objects are cases where a previously used manuscript or writing surfa
 - `congenial-chainsaw-rmfb-html` — classification consistency work and example definitions (GitHub).
 - `fhtw-paper-code-prep` (branch: `cifar10-vanilla-cnn`) — reproducible training scaffolds for CV experiments (GitHub).
 
-### Model Status and Claims Boundary
+### 5.2 Model Status and Claims Boundary
 
 - Models discussed or referenced in this project are **exploratory and comparative**.
 - No single architecture is claimed as definitive or optimal.
@@ -79,7 +79,7 @@ Any future claims will be supported by documented experiments and explicit uncer
 
 ### 5.2 Research claims already demonstrated (example baseline)
 An early approach used transfer learning with **ResNet-50** (ImageNet initialization) and reports strong training accuracy in a small study (“over 600 images…96.77% accuracy…after 30 epochs”). 4  
-(This is not a final scientific claim; it is evidence of feasibility and a baseline to improve with stricter evaluation.)
+(This is not a final scientific claim; it is evidence of feasibility. After finding more images, it has been found that this initial dataset was especially easy.)
 
 ### 5.3 Explainability / trust tooling
 The project explicitly targets explainability via Grad-CAM (and related visualization), to support trust and adoption by manuscript-studies audiences. 5  
@@ -113,12 +113,7 @@ To avoid any ambiguity about ownership:
 - Labels / derived metadata: released openly when legally and ethically permissible.
 - Images: released only when licensing permits; otherwise, publish *pointers* (citations/identifiers) and derived, non-restricted artifacts.
 
-## 10) “Ask” / why this note exists
-This document exists to clearly state:
-1) RMFB is a **personal, open-research project** (public-domain intent), and  
-2) it is being developed in a way designed to avoid entanglement with employer IP.
-
-## Vision and Examples
+## 10) Vision and Examples
 
 For motivation, historical context, illustrative examples, and collaborator-facing narrative, see:
 
@@ -126,3 +121,8 @@ For motivation, historical context, illustrative examples, and collaborator-faci
 [`IP_Plus_Vision_RMFB_rev-2026-01-01.md`](https://github.com/bballdave025/rib-wrist-in-bin-din/blob/main/IP_Plus_Vision_RMFB_rev-2026-01-01.md)
 
 That document intentionally contains material *not* included here.
+
+## 11) “Ask” / why this note exists
+This document exists to clearly state:
+1) RMFB is a **personal, open-research project** (public-domain intent), and  
+2) it is being developed in a way designed to avoid entanglement with employer IP.

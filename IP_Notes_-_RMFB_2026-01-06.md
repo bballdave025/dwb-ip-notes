@@ -20,7 +20,44 @@ This separation is intentional and designed to protect both contributors and fut
 
 ---
 
-## Explicit non-goals
+## 0. What this is (and what it is not)
+
+RMFB is a **vision-plus-technical direction** document for an open research project
+focused on discovering and prioritizing reused manuscript fragments in bindings
+and related structural contexts.
+
+It is written to clarify scope, intent, and interpretive boundaries for
+collaborators, reviewers, and future readers — not to assert novelty or authority
+where neither is appropriate.
+
+RMFB is intended to be **public-domain / open research**, with methods,
+documentation, and (where permissible) derived artifacts released openly.
+
+---
+
+### 0.1 Arrival notes (how to read this document)
+
+This document reflects an **iterative arrival**, not a closed theory.
+
+RMFB prioritizes **discovery, preservation, and scholarly access** over
+automation-for-its-own-sake. The structure may therefore feel non-linear:
+examples may precede formal taxonomy, and uncertainty is surfaced rather than
+hidden.
+
+Readers are encouraged to treat this document as:
+- a working map rather than a final territory,
+- an invitation to collaboration rather than a completed system,
+- a record of evolving understanding rather than a teleological argument.
+
+The project is motivated by the recovery of historically meaningful traces while
+respecting:
+- the labor of past scribes, binders, and conservators,
+- the stewardship of modern archives,
+- and the interpretive authority of human experts.
+
+---
+
+### 0.2 Explicit non-goals (interpretive guardrails)
 
 The RMFB project explicitly does **not** aim to:
 
@@ -31,28 +68,6 @@ The RMFB project explicitly does **not** aim to:
 - treat machine outputs as authoritative rather than suggestive.
 
 All automated methods are intended as **discovery and triage tools**, not final arbiters.
-
----
-
-## 0. What this is (and what it is not)
-
-RMFB is intended to be **public-domain / open research**, with methods, documentation, and (where permissible) derived artifacts released openly.
-
-### 0.1 Arrival notes (how to read this document)
-
-RMFB prioritizes **discovery, preservation, and scholarly access** over extraction or automation-for-its-own-sake.
-
-The project is motivated by the recovery of historically meaningful traces while respecting:
-- the labor of past scribes, binders, and conservators,
-- the stewardship of modern archives,
-- and the interpretive authority of human experts.
-
-Key concepts include
- – iterative arrival,
- – evolving understanding,
- – non-teleological structure,
- – why examples precede taxonomy or vice versa]
-
 
 ---
 

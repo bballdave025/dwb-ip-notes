@@ -6,6 +6,7 @@ Author: David Black &nbsp;&nbsp;&nbsp;&nbsp; GitHub @bballdave025
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+Please attribute work using: Title, Author, Source, and License (TASL format).
 
 ## What is this repository?
 

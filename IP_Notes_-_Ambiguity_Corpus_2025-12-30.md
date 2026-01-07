@@ -1,4 +1,4 @@
-# IP_Notes_Ambiguity_Corpus_Initial_YYYY-MM-DD.md
+# IP_Notes_Ambiguity_Corpus_Initial_2025-12-30.md
 
 ## 0. Status & Intent
 **Status:** Quick & Reckless (Q&R) capture  

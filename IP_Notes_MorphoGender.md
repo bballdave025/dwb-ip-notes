@@ -1,5 +1,5 @@
 # IP_Plus_Vision — MorphoGender
-## Grammatical Gender as a Form-Based Signal
+## Morphological Cues to Grammatical Gender in French and Russian
 
 **Project:** MorphoGender  
 **Status:** Vision + experimental framing  
@@ -15,6 +15,8 @@ semantics, context, or usage frequency.
 
 The project treats gender prediction as a **controlled signal-extraction
 problem**, not as a language-understanding task.
+
+This project concerns _grammatical gender in natural language_, not human gender or identity.
 
 ---
 

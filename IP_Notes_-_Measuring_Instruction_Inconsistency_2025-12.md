@@ -1,7 +1,9 @@
-# IP_Plus_Vision — Measuring Instruction Consistency
+# IP_Plus_Vision_-_Measuring_Instruction_Consistency_2025-12
+
+(maybe 2026-01; I'll have to look at commits)
 
 **Project:** Measuring Instruction Consistency  
-**Author:** David Black (DWB)  
+**Author:** David Black (DWB, GitHub @bballdave025)  
 **Status:** Vision + problem formalization (working document)  
 **Scope:** Task instructions, annotation guidelines, policy constraints, and reward specifications  
 

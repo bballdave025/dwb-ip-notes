@@ -177,4 +177,18 @@ This corpus exists to make that possible.
 
 ---
 
+## Classification & Origin (added 2026-03-17)
+
+**Classification:** B (Primary) — Personal ML learning / tooling experiment  
+**Secondary Classification:** A — Research direction (ambiguity as evaluation framework)
+
+**Origin:**
+Concept developed independently during interview preparation, based on general machine learning and linguistic considerations.  
+Inspired by publicly discussed problem areas (ambiguity handling in LLMs), not by internal tools, datasets, or proprietary workflows.
+
+**Intended Use:**
+Flexible. Open research direction with potential for internal application if aligned with organizational goals.
+
+---
+
 *End of document*

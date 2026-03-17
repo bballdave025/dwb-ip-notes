@@ -222,7 +222,7 @@ Cyrillic-Through-English OCR reframes failure as feedback — and builds from th
 **Origin:**  
 Concept developed independently prior to and outside of employment, motivated by personal multilingual OCR challenges (including Cyrillic text handling) and broader machine learning and data-capture considerations. No employer datasets, tools, or internal systems were used.
 
-The idea existed and possibly prior to 2023, and some data was even gathered. At that point, a systematic approach to data gathering had not been worked out to a useful point, the proposed automated system using the internal clipboard, etc. were developments in 2025.
+The idea predates 2023, with early informal exploration and limited data collection. A more systematic approach (including clipboard-based capture) emerged in 2025.
 
 **Intended Use:**  
 Personal research, tool development, and potential publication. May inform applied systems if appropriate, but remains independently directed.

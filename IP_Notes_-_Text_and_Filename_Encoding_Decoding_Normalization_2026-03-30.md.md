@@ -6,7 +6,7 @@ The `bballdave025/text-cleanroom` repository at
 
 https://github.com/bballdave025/text-cleanroom/tree/main
 
-contains a collection of tools, patterns, and approaches. Hereafter, when though the repository is not at the location of this document, the `bballdave025/text-cleanroom` repo will also be referred to as **this repository**. This collection has been developed as part of my ongoing personal work in:
+contains a collection of tools, patterns, and approaches for text processing. Hereafter, when though the repository is not at the location of this document, the `bballdave025/text-cleanroom` repo will also be referred to as **this repository**. This collection has been developed as part of my ongoing personal work in:
 
 - filename analysis and correction
 - encoding and decoding (e.g., percent-encoding, Unicode handling)

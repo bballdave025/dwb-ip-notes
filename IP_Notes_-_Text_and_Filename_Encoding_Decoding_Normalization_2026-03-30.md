@@ -6,7 +6,11 @@ The `bballdave025/text-cleanroom` repository at
 
 https://github.com/bballdave025/text-cleanroom/tree/main
 
-contains a collection of tools, patterns, and approaches for text processing. Hereafter, when though the repository is not at the location of this document, the `bballdave025/text-cleanroom` repo will also be referred to as **this repository**. This collection has been developed as part of my ongoing personal work in:
+contains a collection of tools, patterns, and approaches for text processing.
+
+Hereafter, although the repository is separate from this document, it will be referred to as **this repository**.
+
+This collection has been developed as part of my ongoing personal work in:
 
 - filename analysis and correction
 - encoding and decoding (e.g., percent-encoding, Unicode handling)
@@ -15,7 +19,7 @@ contains a collection of tools, patterns, and approaches for text processing. He
 
 These tools are part of a long-running personal toolkit developed and refined across:
 
-- independent study (since ~2016)
+- independent study (since ~2016, predating current roles)
 - personal projects
 - volunteer work
 - online coursework
@@ -30,6 +34,7 @@ While similar types of problems may arise in professional environments, the mate
 
 - is **not copied from any employer systems or repositories**
 - does **not include proprietary code, data, or internal workflows**
+- does **not derive from or reproduce prior employer implementations**
 - is intended to reflect **independent implementations and abstractions**
 
 The focus is on reusable ideas and tools that apply broadly across domains.

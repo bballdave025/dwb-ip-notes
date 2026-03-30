@@ -2,7 +2,11 @@
 
 ## Summary
 
-This repository contains a collection of tools, patterns, and approaches developed as part of my ongoing personal work in:
+The `bballdave025/text-cleanroom` repository at
+
+https://github.com/bballdave025/text-cleanroom/tree/main
+
+contains a collection of tools, patterns, and approaches. Hereafter, when though the repository is not at the location of this document, the `bballdave025/text-cleanroom` repo will also be referred to as **this repository**. This collection has been developed as part of my ongoing personal work in:
 
 - filename analysis and correction
 - encoding and decoding (e.g., percent-encoding, Unicode handling)
@@ -79,7 +83,7 @@ It may evolve over time into more structured or modular packages.
 
 MIT License
 
-See https://raw.githubusercontent.com/bballdave025/text-cleanroom/refs/heads/main/LICENSE
+See https://github.com/bballdave025/text-cleanroom/blob/main/LICENSE
 
 The license governs how others may use, modify, and distribute this work.
 
@@ -91,3 +95,5 @@ This document exists to provide clarity of intent and provenance.
 If questions arise about the origin or scope of this work, the guiding principle is:
 
 > This is a personal toolkit built from broadly applicable ideas, implemented independently, and intended for general use.
+
+No proprietary datasets, credentials, or internal system details are included in this repository.

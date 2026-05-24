@@ -223,7 +223,178 @@ This remains exploratory.
 
 ---
 
-## 9. Explicit non-claims
+## 9. Relationship to RMFB-style imagery and symbolic survivability
+
+One motivating exploratory direction involves applying symbolic projection
+techniques (including image-to-ASCII-style conversion methods) to RMFB-style
+imagery and related manuscript-derived visual structures.
+
+Initial informal experimentation suggests that:
+- symbolic projections of RMFB-relevant images can exhibit highly non-linear
+  degradation behavior,
+- local symbolic structure may become unstable rapidly under some projection
+  regimes,
+- and OCR-like recoverability may degrade much more sharply than global layout
+  perception.
+
+At the same time, some forms of symbolic representation may preserve
+unexpectedly useful structural information under carefully chosen projection
+conditions.
+
+This section therefore distinguishes between:
+- aggressive symbolic projection experiments intended to probe catastrophic
+  collapse boundaries,
+and:
+- broader empirical symbolic representations intended to explore alternative
+  representational manifolds for RMFB-style discrimination tasks.
+
+---
+
+### 9.1 Aggressive symbolic projection and catastrophic collapse
+
+One exploratory direction involves intentionally aggressive symbolic projection
+of RMFB-style imagery into highly constrained symbolic spaces.
+
+Examples include:
+- low-symbol ASCII projections,
+- coarse patch-to-character mappings,
+- heavily quantized symbolic renderings,
+- and extreme reductions in symbol budget or spatial resolution.
+
+The motivation is not practical OCR performance.
+
+Instead, these projections may function as:
+- controlled degradation probes,
+- symbolic persistence stress-tests,
+- or topology-sensitive survivability experiments.
+
+For example:
+
+\`\`\`text
+RMFB image
+    ↓
+controlled symbolic projection
+    ↓
+recoverability / topology analysis
+\`\`\`
+
+may help characterize:
+- which visual structures survive quantization,
+- which collapse abruptly,
+- and whether symbolic topology exhibits phase-transition-like behavior under
+  constrained symbolic representations.
+
+Potential observables include:
+- OCR recoverability,
+- topology preservation,
+- graph connectivity persistence,
+- semantic interpretation stability,
+- and human-versus-model disagreement.
+
+Particular attention may be given to:
+- sparse writing traces,
+- edge-dominated structures,
+- bleed-through,
+- ruling patterns,
+- manuscript texture interactions,
+- and small-footprint symbolic features.
+
+Importantly, this framing remains fully compatible with NTEC-style reasoning.
+
+The goal is not:
+- reconstruction of nonexistent information,
+nor:
+- entropy reversal through symbolic projection.
+
+Instead, the goal is to study:
+- persistence,
+- degradation,
+- ambiguity,
+- and recoverability boundaries
+
+under intentionally constrained symbolic encodings.
+
+This direction remains exploratory and may ultimately prove more useful as a
+diagnostic framework than as a practical OCR pipeline.
+
+---
+
+### 9.2 Broad-range symbolic representations and empirical feature exploration
+
+A separate and potentially more practically useful direction involves
+broad-range symbolic representations that are *not* necessarily aggressively
+compressed.
+
+In this framing:
+- image-to-symbol projection is treated as an alternative representational
+  manifold rather than merely a degradation process.
+
+Possible representations include:
+- high-character-density ASCII-style renderings,
+- multi-scale patch-to-symbol mappings,
+- structured symbolic tilings,
+- topology-aware symbolic encodings,
+- and variable patch-dimension / character-dimension ratios.
+
+The core question becomes:
+
+> Can symbolic representations preserve task-relevant RMFB structure in ways
+> that are unusually accessible to lower-computational-cost symbolic or
+> NLP-oriented models?
+
+This is intended primarily as an empirical question.
+
+The project does not assume:
+- that symbolic projections are universally superior,
+- nor that symbolic representations preserve all information efficiently.
+
+Instead, the proposal is that some symbolic transforms may:
+- expose edge structure,
+- preserve adjacency relationships,
+- emphasize sparse writing traces,
+- or simplify certain topology-sensitive discriminative tasks.
+
+One motivating possibility is that symbolic projections may behave as a form
+of structured sparse representation.
+
+Characters are not merely scalar intensity bins:
+- they possess topology,
+- orientation structure,
+- anisotropy,
+- edge characteristics,
+- and symbolic regularity.
+
+As a result, patch-to-character mappings may preserve certain visual
+relationships differently than naive grayscale or low-rank image compression
+methods operating at comparable storage or token budgets.
+
+Potential experimental directions include:
+- varying patch dimensions,
+- varying character vocabularies,
+- multi-scale symbolic projections,
+- symbolic representations optimized for sparse manuscript features,
+- and downstream classification or segmentation tasks operating directly on
+  symbolic encodings.
+
+Possible downstream systems include:
+- lightweight NLP models,
+- sequence architectures,
+- sparse symbolic pipelines,
+- and hybrid symbolic/visual approaches.
+
+This direction remains exploratory.
+
+The emphasis is on:
+- empirical representational behavior,
+- topology preservation,
+- computational efficiency,
+- and symbolic feature accessibility,
+
+rather than on theoretical claims of universal symbolic superiority.
+
+---
+
+## 11. Explicit non-claims
 
 This project does **not** claim:
 
@@ -240,7 +411,7 @@ The project is fundamentally about:
 
 ---
 
-## 10. Why this may matter
+## 12. Why this may matter
 
 Understanding symbolic persistence under projection may help clarify:
 
@@ -262,7 +433,7 @@ for studying:
 
 ---
 
-## 11. Closing note
+## 13. Closing note
 
 Many symbolic systems fail gracefully only up to a point.
 

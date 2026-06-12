@@ -1,0 +1,48 @@
+# Rubric Criterion Issues in an RLHE Annotation Pipeline 
+Technical Analysis: Incomplete Atomicity, Reward Signal Distortion, and the Case for a "Not COMPLETE" Rubric Issue Category RLHE Annotation Quality 15 Scored Examples (A-O) + Post-Analysis
+
+# 1. Background 
+
+## 1.1. Original task as given 
+
+### 1.1.1 Quick issue statement, which be further explained
+
+This task runs into a rule criterion issue that does not fit any current "Rule Problems/Issues" classification options; Rule 1 (specified in the [Simplified](#Simplified-prompt-and-rules-for-analysis) 
+section) is **incomplete and thus not atomic**, because it **leaves out a check that 
+should be bundled**. That relevant check is in Rule 2 (also specified in the 
+[Simplified](#Simplified-prompt-and-rules-for-analysis) section,) where we already see 
+problems with a global check and the local check that should be in Rule 1 leading to 
+mis-signaling the Reinforcement Learning reward function. Many more mis-signaling problems follow, especially those that are caused by an incompleteness in the "Rule Problems/Issues" classification list, which leave out an important part of the potential rule response space. Since the scoring (policy-gradient-based scoring for teaching an AI to write good rules) takes into account not only the fix as it is reported, but the _type_ of fix that is reported, the reward signal becomes especially distorted by the lack of a logically necessary classification for the "Rule Problems/Issues", which will hereafter also be referred to as RPIs.
+
+### 1.1.2. Complete Prompt Description
+ 
+Though I use a simplified example for the analysis, it's useful to see the complete 
+task. 
+
+This is a **multi-turn prompt**. Note that the response doesn't follow all elements of the rules as given by the user/system.
+
+Also note that the requirement to use https://markdownlivepreview.com/ in reporting leads to strange quotation marks up front, as well as the extra `<span>` tags that you'll see if you're looking at unrendered text.
+
+> ” “” “”<br/>
+> <span style="font-family: sans-serif; font-style: normal; font-size: 150%">PROMPT</span><br/><br/> 
+> <span style="display: inline-block; padding-left: 30px; font-family: sans- serif: font-style: normal;">**SYSTEM**:</span>
+> <span style="display: inline-block; padding-left: 30px; font-family: sans- serif; font-style: normal;">Your responses should always end with two linebreaks, then the string, '--kilo-alfa-mike-mike-alfa.'. This long last signature word must be put into code format. In markdown formatting, use <span style="display: inline-block; font-family: monospace; font-style: normal;">'&lt;code&gt;'</span> and <span style="display: inline-block; fontfamily: monospace; font-style: normal;">'&lt;/code&gt;'</span> for specifying any code-formatted text of length one line or less, with a line being defined as anything with at least one non-linebreak character between two linebreaks, between the beginning and a linebreak, or between a linebreak and the end. All responses should be between 150 and 5000 characters. Don't include the signature part in your character count.</span>
+> 
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font style: normal;">**USER**:</span><br/>
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;">I need ideas for some text files and their filenames to be used as input for a word-stemmer project. The text files would contain the words to be stemmed. Please give a brief descriptions of what each file would contain, basically how I would go about creating it. Your response can't use the following- phone, hospital, photo, library, dictionary</span>
+>
+> <span style="display: inline-block; padding-left: 30px; font-family: sans- serif; font style: normal;">**ASSISTANT**:</span><br/>
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;">That sounds fun!<br/><br/>Here are filenames for text files to be fed into a word stemmer and descriptions of contents/how you could create them:</span>
+> 
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;"> • &nbsp;&nbsp; <code>pic_descriptions.txt</code>: Scan or upload about 100 random image files from your collection into an AI image browser. Scrape the auto-created descriptions and dump the contents into the `TXT` file. Increase the number of pictures as required.</span>
+> <span style="display: inline-block; padding-left: 30px: font-family: sans-serif: font-style: normal;"> • &nbsp;&nbsp; <code>words_on_food.txt</code>: From objects like cereal boxes, drink containers, kids' meal boxes, or from online</span>_**... (text content from the middle of the lines, and from the middle of the response, excised)**_
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;"> • &nbsp;&nbsp; <code>websites_of_today.txt</code>: Use the history feature of your browser to open up each website you have visited today. Then, click <kbd>Ctrl</kbd> + <kbd>A</kbd> and <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy all text for each page and paste it into your ever-growing file.</span><br/><br/><span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;">`--kilo-alfa-mike-mike-alfa.`</span>
+> 
+> <span style="display: inline-block; padding-left: 30px; font-family: sans-serif; font-style: normal;">**USER:</span><br/>
+> <span style="display: ínline-block; padding-left: 30px; font-family: sans-serif: font-style: normal;">That's a bit overwhelming. Take every other idea, and give them to me in numhered list style. A prime number between $4.5^2$ and $5^2$ should be the exact count of words in the response that should be put in bold format.</span><br/>" 
+
+The conplete JSON, with the excised parts included, is in [Appendix A](#Appendix-A).
+
+
+> Written with [StackEdit](https://stackedit.io/).
+

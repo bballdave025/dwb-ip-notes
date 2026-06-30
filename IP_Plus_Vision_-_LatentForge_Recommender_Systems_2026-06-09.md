@@ -72,20 +72,20 @@ than publication-oriented or product-oriented.
 
 Primary target dataset:
 
-\[
+$$
 R^i_j
-\]
+$$
 
 where:
 
-- \(i\) indexes users/readers
-- \(j\) indexes books/items
+- $i$ indexes users/readers
+- $j$ indexes books/items
 
 Planned dimensions:
 
-\[
+$$
 R \in \mathbb{R}^{1800 \times 1500}
-\]
+$$
 
 Dataset constraints:
 
@@ -104,43 +104,43 @@ The project intentionally focuses on sparse rather than dense matrices.
 
 #### Global Mean
 
-\[
+$$
 \hat{R}^i_j = \mu
-\]
+$$
 
 ### Item Mean
 
-\[
+$$
 \hat{R}^i_j = \mu_j
-\]
+$$
 
 ### User Mean
 
-\[
+$$
 \hat{R}^i_j = \mu^i
-\]
+$$
 
 ### User + Item Bias Model
 
-\[
+$$
 \hat{R}^i_j
 =
 \mu + b^i + c_j
-\]
+$$
 
 ### Latent Factor Model
 
-\[
+$$
 \hat{R}^i_j
 =
 \mu + b^i + c_j + U^i_k V^k_j
-\]
+$$
 
 where:
 
-- \(U^i_k\) represents user latent embeddings
-- \(V^k_j\) represents item latent embeddings
-- \(k\) indexes latent dimensions
+- $U^i_k$ represents user latent embeddings
+- $V^k_j$ represents item latent embeddings
+- $k$ indexes latent dimensions
 
 ---
 
@@ -229,23 +229,23 @@ This allows:
 
 Conceptual pipeline:
 
-\[
+$$
 \text{latent math}
 \rightarrow
 \text{ratings}
 \rightarrow
 \text{interpretable JSON/lore}
-\]
+$$
 
 Possible future extension:
 
-\[
+$$
 \text{agent simulation}
 \rightarrow
 \text{emergent preferences}
 \rightarrow
 \text{ratings}
-\]
+$$
 
 The first pipeline is considered the primary lean-to implementation.
 

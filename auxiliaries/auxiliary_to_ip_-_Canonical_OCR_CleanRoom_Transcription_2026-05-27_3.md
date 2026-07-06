@@ -362,9 +362,13 @@ or
 >
 > More coming.
 
-or, more compactly (but not equivalently):
+or, more compactly:
 
-> Image 14 of 25
+> Image 2 of 24
+>
+> More coming
+
+though that last, more-compact form should not be preferred.
 
 ---
 

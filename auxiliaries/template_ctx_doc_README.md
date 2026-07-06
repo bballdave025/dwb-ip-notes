@@ -189,16 +189,11 @@ Help me:
 *End of PCDP*
 ```
 
+------------------------------------------------------------------------                                        
+
 ## Practical Note
 
-In normal use, the **Instructions for Next Message** section is often
-**omitted**.
-
-Experience has shown that including it sometimes causes models to
-interpret the transferred context as operational instructions rather
-than project state. In most cases, the PCDP simply establishes the
-project, immediate focus, and previous chat, after which the Context
-Document supplies the authoritative state.
+In normal use, the **Instructions for Next Message** section is often **omitted** _for the chat creating the context document_.                                                                                                 Experience has shown that including it sometimes causes models to interpret the transferred context as operational instructions rather than as information to pass on. In most cases, the PCDP establishes the project, immediate focus, and previous chat. However, giving the directions to the _new_ chat (unlike giving it to the old) actually reduces confusion and extra explanations where Dave would prefer to continue cognitive momentum. After it's clear that the forthcoming Context Document is not a usual prompt, the Context Document can more easily supply the authoritative project state.
 
 Typical workflow:
 
@@ -227,11 +222,44 @@ LN_ncjn_2026-05-01_ctx01_-_config-class-architecture.md
 LN_ncjn_2026-06-30_parked_-_widget-refactor.md
 ```
 
-`LN` = Lab Notebook.
+`LN` = Lab Notebook. This is Dave's longstanding name for these files, including from undergrad and industry work.
 
 The project marker should remain short.
 
-The optional tag is usually omitted unless it adds useful context.
+The optional tag is usually omitted unless it adds useful context. Examples of useful optional tags:
+- ctx01
+- parked
+- submitted-addenda
+- pr-for-k-prisbrey
+
+When in doubt, omit the optional tag.
+
+Choose the slug to describe the primary engineering topi
+c rather than the implementation detail.
+
+--------------------------------------------------------
+----------------
+
+# What Belongs in a Context Document?
+
+A context document should capture the project's **curren
+t engineering
+state**, not merely what changed.
+
+Typical sections include:                               
+- Current architecture
+- Major modules and responsibilities
+- Recent implementation work                            - Current design rationale
+- Constraints and assumptions
+- Active questions
+- Immediate next steps
+                                                        When useful, include small code snippets, directory layo
+uts, or command
+examples that reduce future re-derivation.                                                                      ------------------------------------------------------------------------
+
+# Scope                                                                                                         These documents are intended to bridge work across:                                                             - multiple ChatGPT conversations,
+- multiple development sessions,                        - different machines,
+- and interruptions lasting days or months.                                                                     They are written primarily for the future maintainer of the project,                                            which is usually the author.
 
 ------------------------------------------------------------------------
 

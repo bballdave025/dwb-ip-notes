@@ -31,8 +31,8 @@ Instead, there will be indicators of the number of backticks, <code>n</code>, wh
 > [4-backtick-fence]
 
 3. Full Set
-> [5-backtick-fence]python
-> my_python_module.do_amazing_thing()
+> [5-backtick-fence]python<br/>
+> my_python_module.do_amazing_thing()<br/>
 > [5-backtick-fence]
 
 <code>&lt;!--                                        [[(endof [_A])]] --&gt;</code>
@@ -65,41 +65,54 @@ my_python_module.do_amazing_thing()
 <!--                                        [[(endof [_B])]] -->
 
 
-Some of the backtick numbers, especially for kamMA's transport steps, aren't finalized. However, they have usually been close enough.
+<strike>Some of the backtick numbers, especially for kamMA's transport steps, 
+aren't finalized. However, they have usually been close enough.</strike>
 
-**IMPORTANT:**
+kamMA usually gets by by sending stuff with,
+
+> [4-backtick-fence]markdown<br/>
+> Everything inside, including 3-tick fences<br/>
+> [4-backtick-fence]
+
+though Dave only sees the "Everything inside, including 3-tick fences"
+
+<code>**----------**</code><br/>
+<code>**IMPORTANT:**</code><br/>
+<code>**----------**</code>
 
 Do NOT brainstorm alternate Markdown fence strategies unless explicitly requested.
 
 Assume the following protocol is already experimentally validated and operational:
 
-- canonical notebook content&mdash;kamMA's fancy words for the Markdown that holds OCR trancription, and which represents a Jupyter notebook in the current project&mdash;uses ordinary 3-backtick fences,
+- canonical notebook content&mdash;kamMA's fancy words for the Markdown that
+  holds OCR trancription, and which represents a Jupyter notebook in the current
+  project&mdash;uses ordinary 3-backtick fences,
 - ChatGPT transport wrappers MAY use 4-backtick markdown fences,
-- uncertainty comments use:
-
->        ^⌨v comment describing uncertainty
-  
+- uncertainty comments use:<br/>
+  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
   - as entered with entered using ( <kbd>></kbd> + <kbd>Space</kbd> ) + ( <kbd>Space</kbd> × 7 ) + '^⌨v explanation of uncertainty'
+- explanatory comments remain outside code fences,
+- symbolic placeholders like [3-backtick-fence] are used when discussing fence syntax itself.
 
-  - explanatory comments remain outside code fences,
-  - symbolic placeholders like [3-backtick-fence] are used when discussing fence syntax itself.
-
-  Do not re-litigate these unless new empirical evidence appears.
+**Do not re-litigate these unless new empirical evidence appears.**
 
 # A. Markdown Fence Strategy
 
 ## A.1 Canonical notebook content
 
-Canonical notebook Markdown&mdash;again, that's kamMA's fancy term for the Markdown that holds the finalized, saved and committed, closest-to-presentation OCR trancription, and which represents a Jupyter notebook in the current project&mdash;should use ordinary fenced code blocks:
+Canonical notebook Markdown&mdash;again, that's kamMA's fancy term for the Markdown 
+that holds the finalized, saved and committed, closest-to-presentation OCR trancription, 
+and which represents a Jupyter notebook in the current project&mdash;should use ordinary 
+fenced code blocks:
 
-[3-backtick-fence]<code>python</code>
-<code class="language-python">print("example")</code>
+[3-backtick-fence]<code>python</code><br/>
+<code class="language-python">print("example")</code><br/>
 [3-backtick-fence]
 
 or:
 
-[3-backtick-fence]<code>text</code>
-<code>example output</code>
+[3-backtick-fence]<code>text</code><br/>
+<code>example output</code><br/>
 [3-backtick-fence]
 
 The canonical notebook itself should NOT contain:
@@ -112,9 +125,13 @@ The canonical notebook itself should NOT contain:
 
 ## A.2 Transport-safe outer fence convention
 
-When transmitting an entire Markdown notebook through ChatGPT or another renderer-sensitive transport layer, an outer protective fence MAY be used.
+When transmitting an 
+entire Markdown notebook through ChatGPT or another renderer-sensitive 
+transport layer, an outer protective fence MAY be used.
 
-**Preferred transport wrapper:** monospace is used here, giving a slightly different format than elsewhere. The reason for it here is to differentiate it where it might be hard to see
+**Preferred transport wrapper:** monospace is used here, giving a slightly 
+different format than elsewhere. The reason for it here is to differentiate 
+it where it might be hard to see
 
 <!-- [[(begin [_C])]]                                        -->
 
@@ -149,10 +166,10 @@ It seemed that the structure,
 
 <!-- [[(begin [_D])]]                                        -->
 
-[4-backtick-fence]<code>markdown</code>
-[5-backtick-fence]<code>python</code>
-<code class="language-python">...</code>
-[5-backtick-fence]
+[4-backtick-fence]<code>markdown</code><br/>
+[5-backtick-fence]<code>python</code><br/>
+<code class="language-python">...</code><br/>
+[5-backtick-fence]<br/>
 [4-backtick-fence]
 
 
@@ -160,7 +177,13 @@ It seemed that the structure,
 <!-- |||                                                 ||| -->
 <!--                                        [[(endof [_D])]] -->
 
-came up often. It is now unknown whether the [5-backtick-fence] was part of the ChatGPT transport/escaping or just part of the debigging-effort-induced hallucinations brought on before it was realized that indentation was responnsible for the fortuitously accidental, desired format for <code>^⌨v</code> uncerainty explanations
+came up often. It is now unknown whether the [5-backtick-fence] was part of the 
+ChatGPT transport/escaping or just part of the debugging-effort-induced hallucinations 
+brought on before it was realized that indentation was responnsible for the 
+fortuitously accidental, desired format for <code>^⌨v</code> uncerainty explanations.
+
+**Edit**: It seems the 5-tick fences were part of the debugging-effort-induced
+hallucinations. Avoid it unless nothing else works.
 
 ---
 
@@ -176,15 +199,16 @@ entered using
 
 ( <kbd>></kbd> + <kbd>Space</kbd> ) + ( <kbd>Space</kbd> × 7 ) + '^⌨v explanation of uncertainty'
 
-which looks like the following in an unrendered Markdown file (well, the following _if_ your Markdown renderer recognizes <code class="language-html">&lt;span style=&#x22;font-family: monospace;&#x22;&gt;</code>)
+which looks like the following in an unrendered Markdown file<br/>
 
-<html><span style="font-family: monospace;">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</span></html>
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
 
 
 
 **Therefore:**
 
-Fence-count formatting (and possiby debugging) alone is insufficient. Whitespace and indentation behavior must also be used (and possibly inspected.)
+Fence-count formatting (and possiby debugging) alone is insufficient. Whitespace 
+and indentation behavior must also be used (and possibly inspected.)
 
 ---
 
@@ -200,8 +224,8 @@ directly at the uncertainty location.
 
 **Example:**
 
-[3-backtick-fence]<code>python</code>
-<code class="language-python">print("CO⌨ Dave ███████")</code>
+[3-backtick-fence]<code>python</code><br/>
+<code class="language-python">print("CO⌨ Dave ███████")</code><br/>
 [3-backtick-fence]
 
 The marker denotes:
@@ -229,7 +253,7 @@ Immediately after uncertain regions, place a blockquote uncertainty explanation 
 
 - Unrendered:
 
-<html><span style="font-family: monospace">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation/description</span></html>
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation/description</code>
 
 - Rendered:
 
@@ -237,9 +261,13 @@ Immediately after uncertain regions, place a blockquote uncertainty explanation 
 
 >        ^⌨v explanation/description
 
-  - as preferred (if your Markdown renderer recognizes <code class="language-html">&lt;span style=&#x22;font-family: monospace;&#x22;&gt;</code>)
+  - as preferred
+<!-- NOW USING <CODE> BLOCKS
+     (if your Markdown renderer recognizes 
+     <code class="language-html">&lt;span style=&#x22;font-family: monospace;&#x22;&gt;</code>)
+  -->
 
-<html><blockquote><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;^⌨v explanation/description</span></blockquote></html>
+<html><blockquote><code>&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation/description</code></blockquote></html>
 
 **Spacing:**
 
@@ -254,12 +282,12 @@ Spacing is intentional for (probable) monospace-and-indented emphasis on top of 
 
 **Example with realistic uncertainty:**
 
-[3-backtick-fence]<code>python</code>
-<code class="language-python">print("PRIN⌨ WHOSE NAME WILL BE SHOWN BELOW")</code>
+[3-backtick-fence]<code>python</code><br/>
+<code class="language-python">print("PRIN⌨ WHOSE NAME WILL BE SHOWN BELOW")</code><br/>
 [3-backtick-fence]
 
 
-<html><span style="font-family: monospace">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v uncertain start of line and sentence function; likely contact/ask instruction, with redaction at end</span></html>
+<html><code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v uncertain start of line and sentence function; likely contact/ask instruction, with redaction at end</code></html>
 
 ---
 
@@ -310,7 +338,7 @@ Interpretation (informal):
 
 Use only for commentary/debugging humor, not canonical OCR content.
 
-§ Uncertainty Marker Specifics
+# E. Uncertainty Marker Specifics
 
 This section describes the preferred ontology and usage conventions
 for OCR uncertainty markers and uncertainty explanations in canonical
@@ -328,13 +356,13 @@ without silently "repairing" uncertain source material.
 
 ---
 
-Core Marker
+## E.2. Core Marker
 
 The canonical uncertainty marker is:
 
 ⌨
 
-The marker may appear:
+The incarnation of Unicode codepoint, <code>U+2328</code>. The marker may appear:
 
 - inline,
 - in comments,
@@ -344,7 +372,7 @@ depending on the nature of the uncertainty.
 
 ---
 
-Type 0 — Inline Glyph/OCR Uncertainty
+### E.2.0. Type 0 — Inline Glyph/OCR Uncertainty
 
 Type 0 uncertainty is used when:
 
@@ -357,13 +385,13 @@ The "⌨" marker is inserted directly at the uncertainty location.
 
 Example:
 
-print("How did I k⌨⌨this line woul⌨⌨ have water dro⌨ beforehand?")
+<code>print("How did I k⌨⌨this line woul⌨⌨ have water dro⌨ beforehand?")</code>
 
 Associated explanation:
 
-«   ^⌨v  The text is unclear due to apparent water damage.
-   ^⌨v+ The first unclear region appears to begin with
-   ^⌨v+ "now tha" before becoming unreadable.»
+>       ^⌨v  The text is unclear due to apparent water damage.
+>       ^⌨v+ The first unclear region appears to begin with
+>       ^⌨v+ "now tha" before becoming unreadable.»
 
 Type 0 uncertainty represents:
 
@@ -373,7 +401,7 @@ Type 0 uncertainty represents:
 
 ---
 
-Type 1 — One-Line Contextual or Semantic Uncertainty
+### E.2.1. Type 1 — One-Line Contextual or Semantic Uncertainty
 
 Type 1 uncertainty is used when:
 
@@ -390,12 +418,12 @@ The uncertainty marker is typically appended in a comment.
 
 Example:
 
-fish.kick_out(tning_1, tning_2) # ⌨
+<code>fish.kick_out(tning_1, tning_2) # ⌨</code>
 
 Associated explanation:
 
-«   ^⌨v  The text appears visually readable, but context
-   ^⌨v+ suggests `tning` may more likely be `thing`.»
+       ^⌨v  The text appears visually readable, but context
+       ^⌨v+ suggests `tning` may more likely be `thing`.»
 
 Type 1 may also be used when:
 
@@ -405,7 +433,7 @@ Type 1 may also be used when:
 
 ---
 
-Type 2 — Multi-Line or Regional Uncertainty
+### E.2.2. Type 2 — Multi-Line or Regional Uncertainty
 
 Type 2 uncertainty is used when:
 
@@ -419,6 +447,7 @@ Nearby uncertainty-anchor comments are used instead of inline markers.
 
 Examples:
 
+<pre>
 ##  ========= ##
 ## ============ ##
 ##  IMPORTANT METHOD!  ##
@@ -429,20 +458,21 @@ Examples:
 # ⌨ (below)
 
 def hop_on(hoppers,
-         hoppers: list[str],
-      hoppee: str
+           hoppers: list[str],
+           hoppee: str
  ) -> None:
-    pass # please!
+    pass # please! don't make hoppee = "Pop"
 ##endof:  hop_on(<params>)
+</pre>
 
 Associated explanation:
 
-«   ^⌨v  For "(above)", the lengths and spacing of the
-   ^⌨v+ ASCII banners may be slightly inaccurate.
+       ^⌨v  For "(above)", the lengths and spacing of the
+       ^⌨v+ ASCII banners may be slightly inaccurate.
 
-   ^⌨v  For "(below)", indentation/alignment may be off,
-   ^⌨v+ and the duplicated parameter name appears
-   ^⌨v+ contextually suspicious.»
+       ^⌨v  For "(below)", indentation/alignment may be off,
+       ^⌨v+ and the duplicated parameter name appears
+       ^⌨v+ contextually suspicious.»
 
 Type 2 is especially appropriate for:
 
@@ -453,7 +483,7 @@ Type 2 is especially appropriate for:
 
 ---
 
-Type 3 — Structural / Semantic / Execution Suspicion
+### E.2.3. Type 3 — Structural / Semantic / Execution Suspicion
 
 Type 3 uncertainty is used when:
 
@@ -478,15 +508,17 @@ The literal source text remains unchanged.
 
 Example:
 
+<pre>
 def make_default_path(username: str) -> pathlib.Path:
-    home_dir = pathlib.Path.home()
-    return home_dir / "Documents" / username / "Downloads"  # ⌨
+      home_dir = pathlib.Path.home()
+      return home_dir / "Documents" / username / "Downloads"  # ⌨
+</pre>
 
 Associated explanation:
 
-«   ^⌨v  The line is visually readable, but the resulting
-   ^⌨v+ path structure appears semantically unusual and
-   ^⌨v+ may reflect debugging or transcription error.»
+       ^⌨v  The line is visually readable, but the resulting
+       ^⌨v+ path structure appears semantically unusual and
+       ^⌨v+ may reflect debugging or transcription error.
 
 Type 3 should be used conservatively.
 
@@ -497,7 +529,7 @@ Its purpose is:
 
 ---
 
-End-of-Page Cutoff Convention
+### E.2.4. End-of-Page Cutoff Convention
 
 When a page visibly cuts off:
 
@@ -508,14 +540,14 @@ Instead, a nearby uncertainty explanation is usually sufficient.
 
 Example:
 
-«   ^⌨v  continuation of try block appears cut off by the
-   ^⌨v+ end of the scanned page»
+       ^⌨v  continuation of try block appears cut off by the
+       ^⌨v+ end of the scanned page
 
 This preserves readability while still documenting incompleteness.
 
 ---
 
-Multi-Line Uncertainty Explanation Wrapping
+### E.2.5. Multi-Line Uncertainty Explanation Wrapping
 
 Uncertainty explanations should generally avoid excessively long lines.
 
@@ -523,19 +555,19 @@ When wrapping is needed:
 
 - the first line uses:
 
-«   ^⌨v»
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v</code>
 
 - continuation lines use:
 
-«   ^⌨v+»
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v</code>
 
 Example:
 
-«   ^⌨v  The indentation appears mostly stable, though one
-   ^⌨v+ or two lines may contain additional leading spaces.
+       ^⌨v  The indentation appears mostly stable, though one
+       ^⌨v+ or two lines may contain additional leading spaces.
 
-   ^⌨v  The banner width also appears uncertain by several
-   ^⌨v+ characters near the right edge.»
+       ^⌨v  The banner width also appears uncertain by several
+       ^⌨v+ characters near the right edge.
 
 This convention:
 
@@ -546,7 +578,7 @@ This convention:
 
 ---
 
-General Principle
+## E.3. General Principle
 
 The transcription process should prefer:
 
@@ -560,7 +592,7 @@ over producing cosmetically normalized code.
 
 ---
 
-§ kAmMA 2 Chat Learning -- Overview
+# F. kamMA Chat Learning — Overview
 
 The following notes summarize several renderer-behavior and
 transport-layer discoveries made during iterative OCR workflow
@@ -571,13 +603,14 @@ formal Markdown theory.
 
 ---
 
-Outer-vs-Inner Rendering Distinction
+## F.1. Outer-vs-Inner Rendering Distinction
 
 A major conceptual clarification was reached:
 
-Layer| Desired Behavior
-Outer transport wrapper| SHOULD render
-Inner notebook Markdown| should remain literal
+|Layer| Desired Behavior|
+|-|-|
+|Outer transport wrapper| SHOULD render|
+|Inner notebook Markdown| should remain literal|
 
 In practice:
 
@@ -599,7 +632,7 @@ Markdown recursively.
 
 ---
 
-Canonical Notebook Markdown vs Transport Markdown
+## F.2. Canonical Notebook Markdown vs Transport Markdown
 
 Another important distinction:
 
@@ -620,7 +653,7 @@ It should NOT contain:
 
 ---
 
-Transport Markdown
+## F.3. Transport Markdown
 
 Transport Markdown exists only to safely transmit canonical notebook
 Markdown through renderer-sensitive environments such as ChatGPT.
@@ -633,7 +666,7 @@ Transport wrappers:
 
 ---
 
-The "Raw" Version Is Not Actually Raw Plaintext
+## F.3. The "Raw" Version Is Not Actually Raw Plaintext
 
 A significant UX discovery:
 
@@ -646,7 +679,7 @@ Instead, it is:
 - rendered as one visually unified document block,
 - while preserving literal Markdown source internally.
 
-Desired properties:
+**Desired properties**:
 
 - monospace appearance,
 - scrollable/copyable stability,
@@ -656,7 +689,7 @@ Desired properties:
 
 ---
 
-Multiple Separate Code Cards Were Undesirable
+## F.4. Multiple Separate Code Cards Were Undesirable
 
 An earlier approach caused notebook sections to render as:
 
@@ -668,21 +701,21 @@ This turned out to be undesirable because:
 - fence topology became harder to inspect,
 - and copy/paste semantics became less stable.
 
-Preferred behavior:
+**Preferred behavior**:
 
 - one continuous transport/document block.
 
 ---
 
-Uncertainty-Comment Convention Appears Stable
+## F.5. Uncertainty-Comment Convention Appears Stable
 
 The following convention appears visually robust across renderers:
 
-«   ^⌨v explanation text»
+>       ^⌨v explanation text
 
 with wrapped continuation lines:
 
-«   ^⌨v+ continuation text»
+>       ^⌨v+ continuation text
 
 Advantages:
 
@@ -693,15 +726,16 @@ Advantages:
 
 ---
 
-Distinction Between OCR and Semantic Suspicion
+## F.6. Distinction Between OCR and Semantic Suspicion
 
 The uncertainty-marker ontology evolved into distinct categories:
 
-Type| Meaning
-Type 0| inline glyph/OCR uncertainty
-Type 1| one-line contextual suspicion
-Type 2| multi-line/regional uncertainty
-Type 3| semantic/structural/execution suspicion
+|Type| Meaning|
+|-|-|
+|Type 0| inline glyph/OCR uncertainty|
+|Type 1| one-line contextual suspicion|
+|Type 2| multi-line/regional uncertainty|
+|Type 3| semantic/structural/execution suspicion|
 
 This distinction proved important because:
 
@@ -714,7 +748,7 @@ represent different epistemic situations.
 
 ---
 
-Redactions vs OCR Uncertainty
+## F.7. Redactions vs OCR Uncertainty
 
 An important clarification:
 
@@ -730,7 +764,7 @@ This prevents over-commenting intentionally obscured material.
 
 ---
 
-Renderer Archaeology Became Operationally Important
+## F.8. Renderer Archaeology Became Operationally Important
 
 Whitespace, indentation, and historical Markdown behavior turned out
 to matter substantially.
@@ -744,7 +778,7 @@ In particular:
 
 all affected practical notebook transmission behavior.
 
-Practical conclusion:
+**Practical conclusion**:
 
 Markdown transport behavior should be treated as:
 
@@ -753,3 +787,24 @@ Markdown transport behavior should be treated as:
 - whitespace-sensitive,
 - and partially archaeological.
 
+---
+
+# An essential message for new chats (also mentioned earlier)
+
+<code>**----------**</code><br/>
+<code>**IMPORTANT:**</code><br/>
+<code>**----------**</code>
+
+Do NOT brainstorm alternate Markdown fence strategies unless explicitly requested.
+
+Assume the following protocol is already experimentally validated and operational:
+
+- canonical notebook content uses ordinary 3-backtick fences,
+- ChatGPT transport wrappers MAY use 4-backtick markdown fences,
+- uncertainty comments use:<br/>
+  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
+  - as entered with entered using ( <kbd>></kbd> + <kbd>Space</kbd> ) + ( <kbd>Space</kbd> × 7 ) + '^⌨v explanation of uncertainty'
+- explanatory comments remain outside code fences,
+- symbolic placeholders like [3-backtick-fence] are used when discussing fence syntax itself.
+
+**Do not re-litigate these unless new empirical evidence appears.**

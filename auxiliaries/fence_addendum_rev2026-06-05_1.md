@@ -10,7 +10,7 @@ This addendum documents:
 
 3. and the preferred inline OCR uncertainty comment format.
 
-&dagger; _"canonical ..." is kamMA's way of referring to the Markdown files that hold the OCR trancription in the desired format, and which represents the OCR for a previously printed Jupyter notebook in the current project. I'm not complaining; it's useful terminology that I use myself._
+&#x5B;&dagger;&#x5D; _"canonical ..." is kamMA's way of referring to the Markdown files that hold the OCR trancription in the desired format, and which represents the OCR for a previously printed Jupyter notebook in the current project. I'm not complaining; it's useful terminology that I use myself._
 
 ---
 
@@ -68,13 +68,17 @@ my_python_module.do_amazing_thing()
 <strike>Some of the backtick numbers, especially for kamMA's transport steps, 
 aren't finalized. However, they have usually been close enough.</strike>
 
-kamMA usually gets by by sending stuff with,
+kamMA had one strategy that usually at least got stuff sent through with,
 
 > [4-backtick-fence]markdown<br/>
 > Everything inside, including 3-tick fences<br/>
 > [4-backtick-fence]
 
-though Dave only sees the "Everything inside, including 3-tick fences"
+though, as was desired, Dave only saw the "Everything inside, including 3-tick fences".
+An improved version, where only gray-backgrounded text is seen, may or may not use
+this strategy. Dave doesn't know.
+
+---
 
 <code>**----------**</code><br/>
 <code>**IMPORTANT:**</code><br/>
@@ -89,12 +93,14 @@ Assume the following protocol is already experimentally validated and operationa
   project&mdash;uses ordinary 3-backtick fences,
 - ChatGPT transport wrappers MAY use 4-backtick markdown fences,
 - uncertainty comments use:<br/>
-  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
+  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
   - as entered with entered using ( <kbd>></kbd> + <kbd>Space</kbd> ) + ( <kbd>Space</kbd> × 7 ) + '^⌨v explanation of uncertainty'
 - explanatory comments remain outside code fences,
 - symbolic placeholders like [3-backtick-fence] are used when discussing fence syntax itself.
 
 **Do not re-litigate these unless new empirical evidence appears.**
+
+---
 
 # A. Markdown Fence Strategy
 
@@ -183,7 +189,7 @@ brought on before it was realized that indentation was responnsible for the
 fortuitously accidental, desired format for <code>^⌨v</code> uncerainty explanations.
 
 **Edit**: It seems the 5-tick fences were part of the debugging-effort-induced
-hallucinations. Avoid it unless nothing else works.
+hallucinations. Avoid them unless nothing else works.
 
 ---
 
@@ -262,12 +268,13 @@ Immediately after uncertain regions, place a blockquote uncertainty explanation 
 >        ^⌨v explanation/description
 
   - as preferred
-<!-- NOW USING <CODE> BLOCKS
+
+<!-- NOW USING <CODE> BLOCKS rather than messign with <code>font-family</code>
      (if your Markdown renderer recognizes 
      <code class="language-html">&lt;span style=&#x22;font-family: monospace;&#x22;&gt;</code>)
   -->
 
-<html><blockquote><code>&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation/description</code></blockquote></html>
+<html><blockquote><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation/description</code></blockquote></html>
 
 **Spacing:**
 
@@ -362,7 +369,7 @@ The canonical uncertainty marker is:
 
 ⌨
 
-The incarnation of Unicode codepoint, <code>U+2328</code>. The marker may appear:
+the incarnation of Unicode codepoint, <code>U+2328</code>. The marker may appear:
 
 - inline,
 - in comments,
@@ -389,9 +396,9 @@ Example:
 
 Associated explanation:
 
->       ^⌨v  The text is unclear due to apparent water damage.
->       ^⌨v+ The first unclear region appears to begin with
->       ^⌨v+ "now tha" before becoming unreadable.»
+>        ^⌨v  The text is unclear due to apparent water damage.
+>        ^⌨v+ The first unclear region appears to begin with
+>        ^⌨v+ "now tha" before becoming unreadable.
 
 Type 0 uncertainty represents:
 
@@ -422,8 +429,8 @@ Example:
 
 Associated explanation:
 
-       ^⌨v  The text appears visually readable, but context
-       ^⌨v+ suggests `tning` may more likely be `thing`.»
+>        ^⌨v  The text appears visually readable, but context
+>        ^⌨v+ suggests 'tning' may more likely be 'thing'.
 
 Type 1 may also be used when:
 
@@ -458,21 +465,22 @@ Examples:
 # ⌨ (below)
 
 def hop_on(hoppers,
-           hoppers: list[str],
-           hoppee: str
+        hoppers: list[str],
+          hoppee: str
  ) -> None:
-    pass # please! don't make hoppee = "Pop"
-##endof:  hop_on(<params>)
+    pass # please! don't make 'hoppee="Pop"'
+         # ("Don't hop on Pop!" joke.)
+##endof:  hop_on(...)
 </pre>
 
 Associated explanation:
 
-       ^⌨v  For "(above)", the lengths and spacing of the
-       ^⌨v+ ASCII banners may be slightly inaccurate.
+>        ^⌨v  For "(above)", the lengths and spacing of the
+>        ^⌨v+ ASCII banners may be slightly inaccurate.
 
-       ^⌨v  For "(below)", indentation/alignment may be off,
-       ^⌨v+ and the duplicated parameter name appears
-       ^⌨v+ contextually suspicious.»
+>        ^⌨v  For "(below)", indentation/alignment may be off,
+>        ^⌨v+ and the duplicated parameter name appears
+>        ^⌨v+ contextually suspicious.
 
 Type 2 is especially appropriate for:
 
@@ -510,15 +518,15 @@ Example:
 
 <pre>
 def make_default_path(username: str) -> pathlib.Path:
-      home_dir = pathlib.Path.home()
-      return home_dir / "Documents" / username / "Downloads"  # ⌨
+    home_dir = pathlib.Path.home()
+    return home_dir / "Documents" / username / "Downloads"  # ⌨
 </pre>
 
 Associated explanation:
 
-       ^⌨v  The line is visually readable, but the resulting
-       ^⌨v+ path structure appears semantically unusual and
-       ^⌨v+ may reflect debugging or transcription error.
+>        ^⌨v  The line is visually readable, but the resulting
+>        ^⌨v+ path structure appears semantically unusual and
+>        ^⌨v+ may reflect debugging or transcription error.
 
 Type 3 should be used conservatively.
 
@@ -540,8 +548,7 @@ Instead, a nearby uncertainty explanation is usually sufficient.
 
 Example:
 
-       ^⌨v  continuation of try block appears cut off by the
-       ^⌨v+ end of the scanned page
+>        ^⌨v  continuation of try block appears cut off by the end of the scanned page
 
 This preserves readability while still documenting incompleteness.
 
@@ -555,19 +562,19 @@ When wrapping is needed:
 
 - the first line uses:
 
-<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v</code>
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v</code>
 
 - continuation lines use:
 
-<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v</code>
+<code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v+</code>
 
 Example:
 
-       ^⌨v  The indentation appears mostly stable, though one
-       ^⌨v+ or two lines may contain additional leading spaces.
+>        ^⌨v  The indentation appears mostly stable, though one
+>        ^⌨v+ or two lines may contain additional leading spaces.
 
-       ^⌨v  The banner width also appears uncertain by several
-       ^⌨v+ characters near the right edge.
+>        ^⌨v  The banner width also appears uncertain by several
+>        ^⌨v+ characters near the right edge.
 
 This convention:
 
@@ -711,11 +718,11 @@ This turned out to be undesirable because:
 
 The following convention appears visually robust across renderers:
 
->       ^⌨v explanation text
+>        ^⌨v explanation text
 
 with wrapped continuation lines:
 
->       ^⌨v+ continuation text
+>        ^⌨v+ continuation text
 
 Advantages:
 
@@ -802,7 +809,7 @@ Assume the following protocol is already experimentally validated and operationa
 - canonical notebook content uses ordinary 3-backtick fences,
 - ChatGPT transport wrappers MAY use 4-backtick markdown fences,
 - uncertainty comments use:<br/>
-  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
+  <code>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^⌨v explanation</code>
   - as entered with entered using ( <kbd>></kbd> + <kbd>Space</kbd> ) + ( <kbd>Space</kbd> × 7 ) + '^⌨v explanation of uncertainty'
 - explanatory comments remain outside code fences,
 - symbolic placeholders like [3-backtick-fence] are used when discussing fence syntax itself.

@@ -36,7 +36,7 @@ OCR Transcription Assistance
 @bballdave025
 
 **User (ChatGPT):**  
-thebballdave025@gmail.com
+not-included
 
 ---
 

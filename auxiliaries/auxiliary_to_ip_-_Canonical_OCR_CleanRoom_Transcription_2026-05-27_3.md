@@ -362,7 +362,7 @@ or
 >
 > More coming.
 
-or, more compactly:
+or, more compactly (but not equivalently):
 
 > Image 14 of 25
 

@@ -1,5 +1,12 @@
 <!-- @file IP_Plus_Vision_-_LatentForge_Recommender_Systems_2026-06-09.md -->
 
+<!--
+2026-08-29 notation-only edit:
+Standardized index typography to the project's current Einstein-notation
+conventions. No substantive project goals, modeling plans, or technical
+claims were changed.
+-->
+
 # IP_Plus_Vision — LatentForge Recommender Systems
 
 ## Project Classification
@@ -73,7 +80,7 @@ than publication-oriented or product-oriented.
 Primary target dataset:
 
 $$
-R^i_j
+R^i{}_j
 $$
 
 where:
@@ -105,25 +112,25 @@ The project intentionally focuses on sparse rather than dense matrices.
 #### Global Mean
 
 $$
-\hat{R}^i_j = \mu
+\hat{R}^i{}_j = \mu
 $$
 
 ### Item Mean
 
 $$
-\hat{R}^i_j = \mu_j
+\hat{R}^i{}_j = \mu_j
 $$
 
 ### User Mean
 
 $$
-\hat{R}^i_j = \mu^i
+\hat{R}^i{}_j = \mu^i
 $$
 
 ### User + Item Bias Model
 
 $$
-\hat{R}^i_j
+\hat{R}^i{}_j
 =
 \mu + b^i + c_j
 $$
@@ -131,16 +138,17 @@ $$
 ### Latent Factor Model
 
 $$
-\hat{R}^i_j
+\hat{R}^i{}_j
 =
-\mu + b^i + c_j + U^i_k V^k_j
+\mu + b^i + c_j + U^i{}_{\ell} V^{\ell}{}_j
 $$
 
 where:
 
-- $U^i_k$ represents user latent embeddings
-- $V^k_j$ represents item latent embeddings
-- $k$ indexes latent dimensions
+- $U^i{}_{\ell}$ represents user latent embeddings
+- $V^{\ell}{}_j$ represents item latent embeddings
+- $\ell$ indexes latent coordinates and is summed over in the Einstein notation
+- $k$ is the chosen latent dimensionality/rank, with $\ell = 1, \ldots, k$
 
 ---
 
